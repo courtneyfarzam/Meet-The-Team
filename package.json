@@ -1,0 +1,26 @@
+{
+  "name": "meet-the-team",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmash93/Meet-The-Team.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  },
+  "bugs": {
+    "url": "https://github.com/cmash93/Meet-The-Team/issues"
+  },
+  "homepage": "https://github.com/cmash93/Meet-The-Team#readme"
+}
