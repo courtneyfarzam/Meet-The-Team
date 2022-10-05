@@ -1,0 +1,15 @@
+html {
+    scroll-behavior: smooth;
+}
+
+li {
+    text-align: center;
+}
+
+.card {
+    max-width: 20%;
+}
+
+.content:not(:last-child) {
+    margin-bottom: 6rem;
+}
