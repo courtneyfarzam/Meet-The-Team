@@ -64,16 +64,16 @@ const addEmployee = () => {
             message: "Please enter the employee's ID."
         },    
         {
+            when: (input) => input.role === 'Engineer',
             type: 'input',
             name: 'email',
             message: "Please enter the employee's email address.",
-            when: (input) => input.role === 'Engineer'
         },
         {
+            when: (input) => input.role === 'Intern',
             type: 'input',
             name: 'github',
             message: "Please enter the employee's GitHub username.",
-            when: (input) => input.role === 'Intern'
         },
         {
             type: 'input',
@@ -90,7 +90,7 @@ const addEmployee = () => {
             employee = new Engineer(name, id, email, github)
             console.log(employee)
         } else if (role === "Intern") {
-            employee = new Engineer(name, id, email, school)
+            employee = new Intern(name, id, email, school)
             console.log(employee)
         }
 
@@ -112,14 +112,12 @@ const menuOptions = () => {
     .then((input) => {
         switch (input.options) {
             case 'Add Another Employee': 
-                addEmployee();
+                addEmployee(teamRoster);
                 break;
             case 'Get Team Roster': 
                 let employeeData = generateHTML(teamRoster);
                 writeToFile(employeeData)
-                break;
-        
-            default: console.log(`That didn't work :(`)
+                console.log(teamRoster)
                 break;
         }
     })
@@ -130,9 +128,10 @@ const writeToFile = (data) => {
         if(err) {
             console.log('Oops, there was an error!')
         } else {
-            console.log('Please check the "dist" folder for your files! Thank you!')
+            console.log('Success! Please check the "dist" folder for your files! Thank you!')
         }
     })
 }
 
 addManager()
+
