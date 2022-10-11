@@ -1,63 +1,63 @@
 const generateManager = (manager) => {
     return `
-<div class="card">
-    <div class="card-content">
-        <div class="media">
-            <div class="media-content">
-                <p class="title is-4">${mananger.name}</p>
-                <p class="subtitle is-6">Manager <i class="fa-solid fa-people-roof"></i></p>
-            </div>
-        </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">${manager.name}</p>
+                                <p class="subtitle is-6">Manager <i class="fa-solid fa-people-roof"></i></p>
+                            </div>
+                        </div>
 
-        <div class="content">
-        <p class="id">ID: ${manager.id}</p>
-        <p class="email">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
-        <p class="office">Office Number: ${manager.phone}</p>
-        </div>
-    </div>
-</div>
+                        <div class="content">
+                        <p class="id">ID: ${manager.id}</p>
+                        <p class="email">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
+                        <p class="office">Office Number: ${manager.phone}</p>
+                        </div>
+                    </div>
+                </div>
 `
 }
 
 const generateEngineer = (engineer) => {
     return `
-<div class="card">
-    <div class="card-content">
-        <div class="media">
-            <div class="media-content">
-                <p class="title is-4">${engineer.name}</p>
-                <p class="subtitle is-6">Engineer <i class="fa-solid fa-gear"></i></p>
-            </div>
-        </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">${engineer.name}</p>
+                                <p class="subtitle is-6">Engineer <i class="fa-solid fa-gear"></i></p>
+                            </div>
+                        </div>
 
-        <div class="content">
-        <p class="id">ID: ${engineer.id}</p>
-        <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
-        <p class="office">GitHub Username: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
-        </div>
-    </div>
-</div>
+                        <div class="content">
+                        <p class="id">ID: ${engineer.id}</p>
+                        <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
+                        <p class="office">GitHub Username: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
+                        </div>
+                    </div>
+                </div>
 `
 }
 
 const generateIntern = (intern) => {
     return `
-<div class="card">
-    <div class="card-content">
-        <div class="media">
-            <div class="media-content">
-                <p class="title is-4">${intern.name}</p>
-                <p class="subtitle is-6">Intern <i class="fa-solid fa-graduation-cap"></i></p>
-            </div>
-        </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">${intern.name}</p>
+                                <p class="subtitle is-6">Intern <i class="fa-solid fa-graduation-cap"></i></p>
+                            </div>
+                        </div>
 
-        <div class="content">
-        <p class="id">ID: ${intern.id}</p>
-        <p class="email">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
-        <p class="office">School: ${intern.school}</p>
-        </div>
-    </div>
-</div>
+                        <div class="content">
+                        <p class="id">ID: ${intern.id}</p>
+                        <p class="email">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
+                        <p class="office">School: ${intern.school}</p>
+                        </div>
+                    </div>
+                </div>
 `
 }
 
@@ -133,11 +133,13 @@ const generateHTML = (employeeCards) => {
             <div class="content" id="the-team">
                 <h1>Our wonderful team:</h1>
             </div>
+            <div class="card-container is-flex is-flex-direction-row">
             ${employeeCards}
+            </div>
         </section>
     </body>
     </html>`
 
 }
 
-module.exports = generateHTML;
+module.exports = generateTeam;

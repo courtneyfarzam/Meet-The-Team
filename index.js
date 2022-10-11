@@ -6,6 +6,7 @@ const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
 
 const generateHTML = require('./src/generateHTML');
+const generateTeam = require('./src/generateHTML')
 
 const teamRoster = [];
 
@@ -64,18 +65,19 @@ const addEmployee = () => {
             message: "Please enter the employee's ID."
         },    
         {
-            when: (input) => input.role === 'Engineer',
+
             type: 'input',
             name: 'email',
             message: "Please enter the employee's email address.",
         },
         {
-            when: (input) => input.role === 'Intern',
+            when: (input) => input.role === 'Engineer',
             type: 'input',
             name: 'github',
             message: "Please enter the employee's GitHub username.",
         },
         {
+            when: (input) => input.role === 'Intern',
             type: 'input',
             name: 'school',
             message: "Please enter the school that the intern is attending."
@@ -115,7 +117,7 @@ const menuOptions = () => {
                 addEmployee(teamRoster);
                 break;
             case 'Get Team Roster': 
-                let employeeData = generateHTML(teamRoster);
+                let employeeData = generateTeam(teamRoster);
                 writeToFile(employeeData)
                 console.log(teamRoster)
                 break;
