@@ -33,7 +33,12 @@ const addManager = () => {
         }
     ])
     .then((managerData) => {
-        // need to push into teamRoster here
+        let { name, id, email, phone } = managerData;
+        let manager = new Manager(name, id, email, phone);
+        
+        console.log(manager)
+        teamRoster.push(manager)
+
         menuOptions();
     })
 }
@@ -61,12 +66,14 @@ const addEmployee = () => {
         {
             type: 'input',
             name: 'email',
-            message: "Please enter the employee's email address."
+            message: "Please enter the employee's email address.",
+            when: (input) => input.role === 'Engineer'
         },
         {
             type: 'input',
             name: 'github',
-            message: "Please enter the employee's GitHub username."
+            message: "Please enter the employee's GitHub username.",
+            when: (input) => input.role === 'Intern'
         },
         {
             type: 'input',
@@ -76,6 +83,19 @@ const addEmployee = () => {
     ])
     .then((employeeData) => {
         // need to push to teamRoster here
+        let { name, id, email, role, github, school } = employeeData;
+        let employee;
+
+        if (role === "Engineer"){
+            employee = new Engineer(name, id, email, github)
+            console.log(employee)
+        } else if (role === "Intern") {
+            employee = new Engineer(name, id, email, school)
+            console.log(employee)
+        }
+
+        teamRoster.push(employee)
+
         menuOptions();
     })
 }
