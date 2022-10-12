@@ -10,9 +10,9 @@ const generateManager = (manager) => {
                         </div>
 
                         <div class="content">
-                        <p class="id">ID: ${manager.id}</p>
-                        <p class="email">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
-                        <p class="office">Office Number: ${manager.phone}</p>
+                        <p class="id"><b>ID:</b> ${manager.id}</p>
+                        <p class="email"><b>Email:</b> <a href="mailto:${manager.email}">${manager.email}</a></p>
+                        <p class="office"><b>Office Number:</b> ${manager.phone}</p>
                         </div>
                     </div>
                 </div>
@@ -31,9 +31,9 @@ const generateEngineer = (engineer) => {
                         </div>
 
                         <div class="content">
-                        <p class="id">ID: ${engineer.id}</p>
-                        <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
-                        <p class="office">GitHub Username: <a href="https://github.com/${engineer.github} target="blank">${engineer.github}</a></p>
+                        <p class="id"><b>ID:</b> ${engineer.id}</p>
+                        <p class="email"><b>Email:</b> <a href="mailto:${engineer.email}">${engineer.email}</a></p>
+                        <p class="office"><b>GitHub Username:</b> <a href="https://github.com/${engineer.github} target="blank">${engineer.github}</a></p>
                         </div>
                     </div>
                 </div>
@@ -52,9 +52,9 @@ const generateIntern = (intern) => {
                         </div>
 
                         <div class="content">
-                        <p class="id">ID: ${intern.id}</p>
-                        <p class="email">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
-                        <p class="office">School: ${intern.school}</p>
+                        <p class="id"><b>ID:</b> ${intern.id}</p>
+                        <p class="email"><b>Email:</b> <a href="mailto:${intern.email}">${intern.email}</a></p>
+                        <p class="office"><b>School:</b> ${intern.school}</p>
                         </div>
                     </div>
                 </div>

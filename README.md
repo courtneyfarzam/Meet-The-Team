@@ -14,8 +14,8 @@
 - [Credits](#credits)
 
 ## Demo    
-![](https://github.com/cmash93/README-Generator/blob/main/video/Trimmed-Walkthrough.gif)    
-For a video walkthrough of this Team Generator (after both NPM and Inquirer are installed), please visit [here](https://www.youtube.com/watch?v=4kvHXy4BEAM)
+![](https://github.com/cmash93/Meet-The-Team/blob/main/video/gif.gif)    
+For a video walkthrough of this Team Generator (after both NPM and Inquirer are installed), please visit [here](https://www.youtube.com/watch?v=50K9Bjl6pQI&t=2s)
 
 ## Installation 
 _*You must have both NPM and Inquirer installed!*_   
