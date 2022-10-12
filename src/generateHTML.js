@@ -33,7 +33,7 @@ const generateEngineer = (engineer) => {
                         <div class="content">
                         <p class="id">ID: ${engineer.id}</p>
                         <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
-                        <p class="office">GitHub Username: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
+                        <p class="office">GitHub Username: <a href="https://github.com/${engineer.github} target="blank">${engineer.github}</a></p>
                         </div>
                     </div>
                 </div>
@@ -110,10 +110,10 @@ const generateHTML = (employeeCards) => {
             <div class="hero-body">
               <div class="container has-text-centered">
                 <p class="title">
-                  Title
+                  The Awesome Company
                 </p>
                 <p class="subtitle">
-                  Subtitle
+                  A Great Place To Work
                 </p>
               </div>
             </div>
@@ -133,7 +133,7 @@ const generateHTML = (employeeCards) => {
             <div class="content" id="the-team">
                 <h1>Our wonderful team:</h1>
             </div>
-            <div class="card-container is-flex is-flex-direction-row">
+            <div class="card-container is-flex is-flex-direction-row is-justify-content-center">
             ${employeeCards}
             </div>
         </section>
